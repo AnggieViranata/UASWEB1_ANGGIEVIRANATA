@@ -7,6 +7,7 @@ session_start();
 <meta charset="UTF-8">
 <title>Dashboard POLGANMART</title>
 <style>
+/* ===== CSS GLOBAL ===== */
 body {
 margin: 0;
 font-family: Arial;
@@ -33,6 +34,8 @@ color: white;
 padding: 12px 20px;
 text-decoration: none;
 }
+
+
 .sidebar a:hover {
 background: #34495e;
 }
@@ -83,14 +86,89 @@ background: #f0f0f0;
 margin-left: 220px;
 padding: 20px;
 }
+
+
+
+/* ===== CSS LIST PRODUK ===== */
+/* Card */
+.card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Header card */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background: #f2f2f2;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+/* Button global */
+.btn {
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+/* Tambah Produk (lebih panjang) */
+.btn-add {
+    background: #2ecc71;
+    padding: 8px 16px;
+    font-weight: bold;
+}
+
+/* Edit & Hapus */
+.btn-edit,
+.btn-delete {
+    width: 60px;
+}
+
+.btn-edit {
+    background: #3498db;
+}
+
+.btn-delete {
+    background: #e74c3c;
+}
+
+/* Aksi sejajar */
+.aksi-btn {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+}
+
+
 </style>
 
 </head>
 <body>
 <div class="sidebar">
 <h2>Dashboard</h2>
-<a href="#">Home</a>
-<a href="#">List Produk</a>
+<a href="dashboard.php">Home</a>
+<a href="dashboard.php?page=listproducts">List Produk</a>
 <a href="#">Customer</a>
 <a href="#">Transaksi</a>
 <a href="#">Laporan</a>
