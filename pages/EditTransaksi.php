@@ -1,11 +1,16 @@
 <?php
 include 'koneksi.php';
 
-$id = $_GET['id'];
+$id = $_GET['id'] ?? '';
 
 $data = mysqli_fetch_assoc(mysqli_query($conn,
     "SELECT * FROM transaksi WHERE id_transaksi='$id'"
 ));
+
+if (!$data) {
+    echo "<p style='color:red'>Data transaksi tidak ditemukan</p>";
+    exit;
+}
 
 if (isset($_POST['update'])) {
     $id_pelanggan = $_POST['id_pelanggan'];
@@ -21,6 +26,7 @@ if (isset($_POST['update'])) {
     ");
 
     header("Location: dashboard.php?page=transaksi");
+    exit;
 }
 ?>
 
@@ -38,9 +44,9 @@ if (isset($_POST['update'])) {
             while ($pl = mysqli_fetch_assoc($p)) {
                 $sel = ($pl['id_pelanggan'] == $data['id_pelanggan']) ? 'selected' : '';
             ?>
-            <option value="<?= $pl['id_pelanggan']; ?>" <?= $sel; ?>>
-                <?= $pl['nama_pelanggan']; ?>
-            </option>
+                <option value="<?= $pl['id_pelanggan']; ?>" <?= $sel; ?>>
+                    <?= $pl['nama_pelanggan']; ?>
+                </option>
             <?php } ?>
         </select>
 
