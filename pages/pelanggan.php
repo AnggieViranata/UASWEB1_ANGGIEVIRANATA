@@ -8,7 +8,9 @@ $no = 1;
 <div class="card">
     <div class="card-header">
         <h3>Data Pelanggan</h3>
-        <button class="btn btn-add">+ Tambah Pelanggan</button>
+        <a href="dashboard.php?page=tambahPelanggan" class="btn btn-add">
+            + Tambah Pelanggan
+        </a>
     </div>
 
     <table>
@@ -34,8 +36,14 @@ $no = 1;
                 <td><?= $row['email']; ?></td>
                 <td>
                     <div class="aksi-btn">
-                        <button class="btn btn-edit">Edit</button>
-                        <button class="btn btn-delete">Hapus</button>
+                        <a href="dashboard.php?page=edit_pelanggan&id=<?= $row['id_pelanggan']; ?>"
+                           class="btn btn-edit">Edit</a>
+
+                        <a href="dashboard.php?page=hapus_pelanggan&id=<?= $row['id_pelanggan']; ?>"
+                           class="btn btn-delete"
+                           onclick="return confirm('Yakin hapus data ini?')">
+                           Hapus
+                        </a>
                     </div>
                 </td>
             </tr>
