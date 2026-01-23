@@ -39,7 +39,7 @@ $no = 1;
                         <a href="dashboard.php?page=EditPelanggan&id=<?= $row['id_pelanggan']; ?>"
                            class="btn btn-edit">Edit</a>
 
-                        <a href="dashboard.php?page=hapus_pelanggan&id=<?= $row['id_pelanggan']; ?>"
+                        <a href="dashboard.php?page=HapusPelanggan&id=<?= $row['id_pelanggan']; ?>"
                            class="btn btn-delete"
                            onclick="return confirm('Yakin hapus data ini?')">
                            Hapus
