@@ -30,7 +30,7 @@ $no = 1;
     <td><?= $row['satuan']; ?></td>
     <td> <div class="aksi-btn">
         <a href="dashboard.php?page=editProduk&id=<?= $row['id_barang']; ?>" class="btn btn-edit">Edit</a>
-    <a href="dashboard.php?page=hapus_produk&id=<?= $row['id_barang']; ?>" class="btn btn-delete" onclick="return confirm('Yakin hapus data ini?')"> Hapus </a>
+    <a href="dashboard.php?page=hapusProduk&id=<?= $row['id_barang']; ?>" class="btn btn-delete" onclick="return confirm('Yakin hapus data ini?')"> Hapus </a>
 </div>
 </td>
 </td>
