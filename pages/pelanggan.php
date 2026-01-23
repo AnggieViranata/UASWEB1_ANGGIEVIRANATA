@@ -36,7 +36,7 @@ $no = 1;
                 <td><?= $row['email']; ?></td>
                 <td>
                     <div class="aksi-btn">
-                        <a href="dashboard.php?page=edit_pelanggan&id=<?= $row['id_pelanggan']; ?>"
+                        <a href="dashboard.php?page=EditPelanggan&id=<?= $row['id_pelanggan']; ?>"
                            class="btn btn-edit">Edit</a>
 
                         <a href="dashboard.php?page=hapus_pelanggan&id=<?= $row['id_pelanggan']; ?>"
