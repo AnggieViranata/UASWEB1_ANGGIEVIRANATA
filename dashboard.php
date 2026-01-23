@@ -171,7 +171,7 @@ th, td {
 <a href="dashboard.php?page=listproducts">List Produk</a>
 <a href="dashboard.php?page=pelanggan">Customer</a>
 <a href="dashboard.php?page=transaksi">Transaksi</a>
-<a href="#">Laporan</a>
+<a href="dashboard.php?page=">Laporan</a>
 </div>
 <div class="header">
 <div class="dropdown">
