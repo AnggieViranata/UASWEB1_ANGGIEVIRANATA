@@ -12,5 +12,5 @@ if ($id == '') {
 mysqli_query($conn, "DELETE FROM transaksi WHERE id_transaksi='$id'");
 
 // Kembali ke data transaksi
-header("Location: dashboard.php?page=transaksi");
+header("Location: dashboard.php?page=Transaksi");
 exit;
