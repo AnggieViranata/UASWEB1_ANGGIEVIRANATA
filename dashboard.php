@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -171,28 +172,33 @@ th, td {
 <a href="dashboard.php?page=listproducts">List Produk</a>
 <a href="dashboard.php?page=pelanggan">Customer</a>
 <a href="dashboard.php?page=transaksi">Transaksi</a>
-<a href="dashboard.php?page=">Laporan</a>
+<a href="dashboard.php?page=Laporan">Laporan</a>
 </div>
+
 <div class="header">
-<div class="dropdown">
-<div class="profile-btn" onclick="toggleMenu()">Profile ▾</div>
-<div class="dropdown-content" id="profileMenu">
-<a href="dashboard.php?page=profile">My Profile</a>
-<a href="#">Logout</a>
+    <div class="dropdown">
+        <div class="profile-btn" onclick="toggleMenu()">Profile ▾</div>
+        <div class="dropdown-content" id="profileMenu">
+            <a href="dashboard.php?page=profile">My Profile</a>
+            <a href="dashboard.php?page=logout">Logout</a>
+        </div>
+    </div>
 </div>
-</div>
-</div>
-<div class="content">
-<?php
-$page = $_GET['page'] ?? 'home';
-$file = "pages/$page.php";
-if (file_exists($file)) {
-include $file;
-} else {
-echo "<h2>Welcome Dashboard</h2>";
-}
-?>
-</div>
+
+ <!-- Content Area -->
+    <div class="content">
+    <?php
+    $page = $_GET['page'] ?? 'home';
+    $file = "pages/$page.php";
+    if (file_exists($file)) {
+        include $file;
+    } else {
+        echo "<h2>Welcome Dashboard</h2>";
+    }
+    ?>
+    </div>
+
+
 
 <script>
 function toggleMenu() {
